@@ -1,10 +1,13 @@
 package com.example.login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Adaptador extends BaseAdapter {
 
@@ -17,15 +20,47 @@ public class Adaptador extends BaseAdapter {
     String[][] datos;
     int [] datosImg;
 
+    public Adaptador (Context conexto, String[][] datos, int [] imagenes ){
+        this.contexto = conexto;
+        this.datos= datos;
+        this.datosImg= imagenes;
+        inflater = (LayoutInflater)conexto.getSystemService(conexto.LAYOUT_INFLATER_SERVICE);
+
+    }
+
+
+
+
     @Override
     public View getView(int i, View convertView, ViewGroup parent) {
-        return null;
+        final View vista = inflater.inflate(R.layout.elemento_listado,null);
+
+        TextView titulo = (TextView) vista.findViewById(R.id.TextListado);
+
+        ImageView imagen = (ImageView) vista.findViewById(R.id.ImagenListado);
+
+        titulo.setText(datos[i][0]);
+        imagen.setImageResource(datosImg[i]);
+
+        imagen.setTag(i);
+        imagen.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent visorImagen = new Intent(contexto, VisorImagen.class);
+                visorImagen.putExtra("IMG", datosImg[(Integer) v.getTag()]);
+                contexto.startActivity(visorImagen);
+
+            }
+        });
+
+
+        return vista;
     }
 
 
     @Override
     public int getCount() {
-        return 0;
+        return datosImg.length;
     }
 
     @Override
