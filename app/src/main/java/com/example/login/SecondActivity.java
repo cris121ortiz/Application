@@ -14,10 +14,21 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
-    int [] Imagenes = {R.drawable.michaeljacson, R.drawable.elvis, R.drawable.thebeatles, R.drawable.gunsandroses};
 
-    String [] Nombres = {"Michael Jacson","Elvis Presley","The Beatles","Guns and Roses"};
-    
+    ListView Listado;
+
+    String [][] datos = {
+            {"Michael Jacson"},
+            {"Elvis"},
+            {"Guns and Roses"},
+            {"The Beatles"}
+
+    };
+
+    int [] datosImg= {R.drawable.michaeljacson,R.drawable.elvis,R.drawable.gunsandroses,R.drawable.thebeatles};
+
+
+
 
 
 
@@ -26,11 +37,56 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        ListView Listviewalbums = (ListView)findViewById(R.id.Listviewalbums);
+        Listado= (ListView) findViewById(R.id.Listado);
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /*     ListView Listviewalbums = (ListView)findViewById(R.id.Listviewalbums);
 
         CustomAdapter customAdapter = new CustomAdapter();
 
         Listviewalbums.setAdapter(customAdapter);
+
+
+
+
+           int [] Imagenes = {R.drawable.michaeljacson, R.drawable.elvis, R.drawable.thebeatles, R.drawable.gunsandroses};
+
+    String [] Nombres = {"Michael Jacson","Elvis Presley","The Beatles","Guns and Roses"};
+
 
 
         Listviewalbums.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -98,5 +154,8 @@ public class SecondActivity extends AppCompatActivity {
         }
     }
 
+8/
 
-}
+
+
+

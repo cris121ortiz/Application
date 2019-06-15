@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
-        <activity android:name=".Michaeljacson" />
-        <activity android:name=".Elvis" />
-        <activity android:name=".Thebeatles" />
         <activity android:name=".SecondActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
