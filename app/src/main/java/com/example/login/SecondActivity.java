@@ -38,6 +38,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         Listado= (ListView) findViewById(R.id.Listado);
+        Listado.setAdapter(new Adaptador(this, datos,datosImg));
 
 
     }
@@ -154,7 +155,7 @@ public class SecondActivity extends AppCompatActivity {
         }
     }
 
-8/
+*/
 
 
 

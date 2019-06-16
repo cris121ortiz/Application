@@ -42,16 +42,7 @@ public class Adaptador extends BaseAdapter {
         titulo.setText(datos[i][0]);
         imagen.setImageResource(datosImg[i]);
 
-        imagen.setTag(i);
-        imagen.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent visorImagen = new Intent(contexto, VisorImagen.class);
-                visorImagen.putExtra("IMG", datosImg[(Integer) v.getTag()]);
-                contexto.startActivity(visorImagen);
 
-            }
-        });
 
 
         return vista;
