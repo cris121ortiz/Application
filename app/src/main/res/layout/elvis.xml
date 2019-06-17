@@ -314,24 +314,6 @@ tools:context=".MainActivity">
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/Bregrsar"
-        android:layout_width="102dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="47dp"
-        android:layout_marginLeft="47dp"
-        android:layout_marginTop="372dp"
-        android:layout_marginEnd="262dp"
-        android:layout_marginRight="262dp"
-        android:layout_marginBottom="16dp"
-        android:text="Regresar" />
-
 
 </RelativeLayout>
 

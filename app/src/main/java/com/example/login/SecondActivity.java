@@ -40,6 +40,18 @@ public class SecondActivity extends AppCompatActivity {
         Listado= (ListView) findViewById(R.id.Listado);
         Listado.setAdapter(new Adaptador(this, datos,datosImg));
 
+        Listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent visorDetalles = new Intent(view.getContext(),Detalles.class);
+                visorDetalles.putExtra("Tit",datos [position] [0]);
+                visorDetalles.putExtra("Det",datos [position] [4]);
+                startActivity(visorDetalles);
+
+
+            }
+        });
+
 
     }
 }
