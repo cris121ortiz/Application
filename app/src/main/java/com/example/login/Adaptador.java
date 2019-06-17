@@ -51,9 +51,10 @@ public class Adaptador extends BaseAdapter {
 
     @Override
     public int getCount() {
+
         return datosImg.length;
     }
-
+ 
     @Override
     public Object getItem(int position) {
         return null;

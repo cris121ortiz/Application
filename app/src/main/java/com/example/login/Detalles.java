@@ -14,13 +14,19 @@ public class Detalles extends AppCompatActivity {
 
         TextView name = (TextView) findViewById(R.id.tv_name);
         TextView followers = (TextView) findViewById(R.id.Followera);
+        TextView following = (TextView) findViewById(R.id.Following);
+        TextView email = (TextView) findViewById(R.id.email);
+        TextView fecha = (TextView) findViewById(R.id.birth);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
         if (b!=null){
             name.setText(b.getString("Tit"));
-            followers.setText(b.getString("Det"));
+            followers.setText(b.getString("FOL"));
+            following.setText(b.getString("FOLLOWING"));
+            email.setText(b.getString("email"));
+            fecha.setText((b.getString("birth")));
         }
 
 

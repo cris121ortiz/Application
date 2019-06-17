@@ -18,11 +18,10 @@ public class SecondActivity extends AppCompatActivity {
     ListView Listado;
 
     String [][] datos = {
-            {"Michael Jacson"},
-            {"Elvis"},
-            {"Guns and Roses"},
-            {"The Beatles"}
-
+            {"Michael Jacson","900", "1","michaeljackson@gmail.com","29 Aug. 1958"},
+            {"Elvis","300", "2","Elvis@gmail.com","January 8, 1935"},
+            {"Guns and Roses","400", "3", "gunsansroses@gmail.com","1985"},
+            {"The Beatles","200", "4","thebeatles@gmail.com","1970"}
     };
 
     int [] datosImg= {R.drawable.michaeljacson,R.drawable.elvis,R.drawable.gunsandroses,R.drawable.thebeatles};
@@ -45,7 +44,11 @@ public class SecondActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent visorDetalles = new Intent(view.getContext(),Detalles.class);
                 visorDetalles.putExtra("Tit",datos [position] [0]);
-                visorDetalles.putExtra("Det",datos [position] [4]);
+                visorDetalles.putExtra("FOL",datos [position] [1]);
+                visorDetalles.putExtra("FOLLOWING",datos [position] [2]);
+                visorDetalles.putExtra("email",datos [position] [3]);
+                visorDetalles.putExtra("fecha",datos [position][4]);
+
                 startActivity(visorDetalles);
 
 
